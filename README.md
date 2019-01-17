@@ -2,22 +2,22 @@
 
 ## Solutions existantes
 
-### A la main
+### A la main (JL)
 - Build en local, publication via ftp (ou autre)
 - Perte de temps et erreur humaine
 
-### Github pages
+### Github pages (JL)
 - Simple mais très limité
 - Nécessite absolument un repo Github
 - Les sources doivent être poussé, l'outil ne le fait pas pour nous
 - Une seule version en ligne à la fois
 
-### Solutions de déploiement (Travis, Azure Dev ops, ...)
+### Solutions de déploiement (Travis, Azure Dev ops, ...) (JL)
 - Peut build et déployer
 - Nécessite une solution d'hébergement 
 - Compliqué
 
-## Netlify, kesako ?
+## Netlify, kesako ? (John)
 Court blabla
 
 ### Demo
@@ -31,7 +31,7 @@ Puis **démo** directement
 - Création d'un site 
 - Déploiement
 
-## Features
+## Features (John)
 - Custom domains / conf DNS
 - Split testing
 - Déploiement de PR
@@ -47,7 +47,7 @@ Puis **démo** directement
 - Rajout d'un form san fichier
 - Notification
 
-## Conclusion
+## Conclusion (JL)
 
 ### Avancée
 Conf via netlify.toml
@@ -58,3 +58,7 @@ Pricing
 ### Rappel du besoin
 
 ### Remerciements
+
+### Ressources
+- Undraw
+- Build with <3 by Spectacle
