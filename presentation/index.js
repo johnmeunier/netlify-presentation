@@ -1,36 +1,53 @@
 // Import React
-import React from 'react';
+import React from "react";
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, Image, List, ListItem, Notes, Quote, Slide, Text, S } from 'spectacle';
+import {
+  BlockQuote,
+  Cite,
+  Deck,
+  Heading,
+  Image,
+  List,
+  ListItem,
+  Notes,
+  Quote,
+  Slide,
+  Text,
+  S,
+  Layout,
+  Fill,
+  Fit
+} from "spectacle";
 // Import theme
-import createTheme from 'spectacle/lib/themes/default';
-import heading from 'spectacle/lib/components/heading';
+import createTheme from "spectacle/lib/themes/default";
+import heading from "spectacle/lib/components/heading";
 
 const images = {
-  netlifyFull: require('../assets/netlify-full.svg'),
-  domains: require('../assets/domains.svg'),
-  forms: require('../assets/forms.svg'),
-  identity: require('../assets/identity.svg'),
-  splitTesting: require('../assets/splitTesting.svg'),
-  pr: require('../assets/pr.svg'),
-  auth: require('../assets/auth.svg'),
-  notification: require('../assets/notification.svg')
+  netlifyFull: require("../assets/netlify-full.svg"),
+  domains: require("../assets/domains.svg"),
+  forms: require("../assets/forms.svg"),
+  identity: require("../assets/identity.svg"),
+  splitTesting: require("../assets/splitTesting.svg"),
+  pr: require("../assets/pr.svg"),
+  auth: require("../assets/auth.svg"),
+  notification: require("../assets/notification.svg"),
+  toml: require("../assets/netlifytoml.png")
 };
 
 // Require CSS
-require('normalize.css');
+require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: '#e74c3c',
-    secondary: '#ecf0f1',
-    tertiary: '#85144b',
-    quaternary: '#CECECE',
-    dark: '#080F0F'
+    primary: "#e74c3c",
+    secondary: "#ecf0f1",
+    tertiary: "#85144b",
+    quaternary: "#001f3f",
+    dark: "#080F0F"
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica'
+    primary: "Montserrat",
+    secondary: "Helvetica"
   }
 );
 
@@ -39,13 +56,18 @@ const featureImageSize = 800;
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={['slide']} transitionDuration={500} theme={theme}>
-        <Slide transition={['zoom']} bgColor="primary">
+      <Deck
+        transition={["slide"]}
+        transitionDuration={500}
+        theme={theme}
+        progress="bar"
+      >
+        <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
           </Heading>
         </Slide>
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide transition={["slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
           </Heading>
@@ -56,7 +78,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide transition={["slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Github Pages
           </Heading>
@@ -71,7 +93,7 @@ export default class Presentation extends React.Component {
             <ListItem>Single version online</ListItem>
           </List>
         </Slide>
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide transition={["slide"]} bgColor="primary">
           <Heading size={3} caps textColor="secondary">
             Continuous integration tools
           </Heading>
@@ -151,6 +173,60 @@ export default class Presentation extends React.Component {
             <ListItem>Form storing</ListItem>
             <ListItem>Notification</ListItem>
           </List>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} fit textColor="secondary" caps>
+            But also...
+          </Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={1} fit textColor="primary" caps>
+            Configuration as Code
+          </Heading>
+          <Image src={images.toml} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+          <Heading size={1} fill textColor="primary">
+            Pricing
+          </Heading>
+          <Heading size={5} fill>
+            Free
+          </Heading>
+          <List fit textColor="dark">
+            <ListItem>1 user</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+          <Heading size={1} fill textColor="primary">
+            Pricing
+          </Heading>
+          <Heading size={5} fill>
+            45$/mo
+          </Heading>
+          <List fit textColor="dark">
+            <ListItem>5 users</ListItem>
+            <ListItem>Owner / Collaborator roles</ListItem>
+            <ListItem fit>Password Protection</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+          <Heading size={1} fill textColor="primary">
+            Pricing
+          </Heading>
+
+          <Heading size={5} fill>
+            290$/mo
+          </Heading>
+          <List fit textColor="dark">
+            <ListItem>10 user</ListItem>
+            <ListItem>Multiple roles</ListItem>
+            <ListItem>Role-based access control</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading textColor="secondary" fit>
+            Thanks!
+          </Heading>
         </Slide>
       </Deck>
     );
