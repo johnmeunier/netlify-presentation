@@ -1,58 +1,51 @@
 // Import React
-import React from "react";
+import React from 'react';
 // Import Spectacle Core tags
-import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
-  Image,
-  List,
-  ListItem,
-  Notes,
-  Quote,
-  Slide,
-  Text,
-  S
-} from "spectacle";
+import { BlockQuote, Cite, Deck, Heading, Image, List, ListItem, Notes, Quote, Slide, Text, S } from 'spectacle';
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
+import heading from 'spectacle/lib/components/heading';
 
 const images = {
-  formidagon: require("../assets/formidable-logo.svg"),
-  goodWork: require("../assets/good-work.gif")
+  netlifyFull: require('../assets/netlify-full.svg'),
+  domains: require('../assets/domains.svg'),
+  forms: require('../assets/forms.svg'),
+  identity: require('../assets/identity.svg'),
+  splitTesting: require('../assets/splitTesting.svg'),
+  pr: require('../assets/pr.svg'),
+  auth: require('../assets/auth.svg'),
+  notification: require('../assets/notification.svg')
 };
 
 // Require CSS
-require("normalize.css");
+require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: "#e74c3c",
-    secondary: "#ecf0f1",
-    tertiary: "#85144b",
-    quaternary: "#CECECE"
+    primary: '#e74c3c',
+    secondary: '#ecf0f1',
+    tertiary: '#85144b',
+    quaternary: '#CECECE',
+    dark: '#080F0F'
   },
   {
-    primary: "Montserrat",
-    secondary: "Helvetica"
+    primary: 'Montserrat',
+    secondary: 'Helvetica'
   }
 );
+
+const featureImageSize = 800;
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={["zoom", "slide"]}
-        transitionDuration={500}
-        theme={theme}
-      >
-        <Slide transition={["zoom"]} bgColor="primary">
+      <Deck transition={['slide']} transitionDuration={500} theme={theme}>
+        <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
           </Heading>
@@ -63,22 +56,26 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Github Pages
           </Heading>
-          <Heading italic={true} size={5} textColor="tertiary">Simple, but limited</Heading>
+          <Heading italic size={5} textColor="tertiary">
+            Simple, but limited
+          </Heading>
           <List>
-            <ListItem><S type="bold">Requires</S> a Github repository</ListItem>
+            <ListItem>
+              <S type="bold">Requires</S> a Github repository
+            </ListItem>
             <ListItem>Generated code must be checked in</ListItem>
             <ListItem>Single version online</ListItem>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={3} caps textColor="secondary">
             Continuous integration tools
           </Heading>
-          <Heading italic={true} size={5} textColor="tertiary">
+          <Heading italic size={5} textColor="tertiary">
             Travis, Azure pipelines, etc...
           </Heading>
           <List>
@@ -88,51 +85,72 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgColor="secondary">
-          <Image src={images.formidagon} width={800} />
+          <Image src={images.netlifyFull} width={1000} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
+        <Slide bgColor="secondary">
+          <Heading size={1} textColor="primary">
+            Demo 1
           </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <List textColor="dark">
+            <ListItem>Creation of a new project</ListItem>
+            <ListItem>Versionning of this new project on GitHub</ListItem>
+            <ListItem>Creation of a site on Netlify</ListItem>
+            <ListItem>Deployment</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite margin="10px 0 0 30px">Author</Cite>
-          </BlockQuote>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Custom domains & DNS configuration
+          </Heading>
+          <Image src={images.domains} width={featureImageSize} />
         </Slide>
-        <Slide>
-          <Image src={images.goodWork} width={500} />
-          <Notes>gifs work too</Notes>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Split testing
+          </Heading>
+          <Image src={images.splitTesting} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Pull request deployment
+          </Heading>
+          <Image src={images.pr} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Notification
+          </Heading>
+          <Image src={images.notification} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Forms
+          </Heading>
+          <Image src={images.forms} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Identity
+          </Heading>
+          <Image src={images.identity} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={2} textColor="primary">
+            Auth
+          </Heading>
+          <Image src={images.auth} width={featureImageSize} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
+            Demo 2
+          </Heading>
+          <List textColor="dark">
+            <ListItem>Domain changing</ListItem>
+            <ListItem>Split visit on two branches</ListItem>
+            <ListItem>Demonstration of continuous integration</ListItem>
+            <ListItem>Form storing</ListItem>
+            <ListItem>Notification</ListItem>
+          </List>
         </Slide>
       </Deck>
     );
