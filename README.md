@@ -1,4 +1,4 @@
-# Step 1
+# Step 1 : init repo
 
 ```bash
 git checkout --orphan demo
@@ -12,43 +12,45 @@ touch style.scss
 
 ```json
 {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+  "start": "parcel index.html",
+  "build": "parcel build index.html"
 }
-  ```
+```
+
 # Step 3 : édition du html et css
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.scss" />
-</head>
-<body>
+  </head>
+  <body>
     <h1>Salut les IARDeurs</h1>
-</body>
+  </body>
 </html>
 ```
 
 ```css
 body {
-    margin:0;
-    padding:0;
-    background-color:#FF4136;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ff4136;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    margin:10vh auto ;
-    width:fit-content;
-    font-size: 7em;
+  margin: 10vh auto;
+  width: fit-content;
+  font-size: 7em;
 }
 ```
+
 # Step 4 : .gitignore
 
 ```
@@ -58,7 +60,8 @@ dist/
 .vscode/
 ```
 
-# Step 5
+# Step 5 : push sur le repo
+
 ```bash
 git add .
 git commit -m "mon app"
