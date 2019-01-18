@@ -20,6 +20,8 @@ import {
   Fill,
   Text
 } from "spectacle";
+
+import Profile from "./profiles";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 import "./style.css";
@@ -35,9 +37,7 @@ const images = {
   notification: require("../assets/notification.svg"),
   toml: require("../assets/netlifytoml.png"),
   john: require("../assets/john.jpg"),
-  github: require("../assets/github.svg"),
-  web: require("../assets/web.svg"),
-  twitter: require("../assets/twitter.svg")
+  jl: require("../assets/jl.jpg")
 };
 
 // Require CSS
@@ -78,41 +78,43 @@ export default class Presentation extends React.Component {
           <Layout>
             <Fill>
               <Heading textColor="secondary" size={6}>
-                Johnathan<br/>MEUNIER
+                Johnathan
+                <br />
+                MEUNIER
               </Heading>
               <Link head="http://twitter.com/J7N__">@J7N__</Link>
             </Fill>
             <Fit>
-              <Heading textColor="primary" size={3}>&</Heading>
+              <Heading textColor="primary" size={3}>
+                &
+              </Heading>
             </Fit>
             <Fill>
               <Heading textColor="secondary" size={6}>
-                Jean-Lou<br/>PIERMÉ
+                Jean-Lou
+                <br />
+                PIERMÉ
               </Heading>
               <Link head="http://twitter.com/jloupiote">@jloupiote</Link>
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="tertiary" className="bgDotted">          
-          <Heading textColor="secondary" size={3}>
-            Johnathan MEUNIER
-          </Heading>         
-          <Heading textColor="primary" size={5}>
-            FullStack Engineer JS
-          </Heading>
-          <Image src={images.john} className="avatar"/>
-          <List textAlign="left" className="presentation__list">
-            <ListItem><Link head="http://johnathan.fr">
-              <Image src={images.web} />Johnathan.fr</Link>
-            </ListItem>
-            <ListItem><Link head="http://twitter.com/j7n__">
-              <Image src={images.twitter} />@j7n__</Link>
-            </ListItem>
-            <ListItem><Link head="http://github.com/johnmeunier">
-              <Image src={images.github} />johnmeunier</Link>
-            </ListItem>
-          </List>
-        </Slide>
+        <Profile
+          name="Johnathan MEUNIER"
+          job="FullStack Engineer JS"
+          website="Johnathan.fr"
+          twitter="j7n__"
+          github="johnmeunier"
+          pic={images.john}
+        />
+        <Profile
+          name="Jean-Lou PIERME"
+          job="FullStack Software Engineer"
+          website="jlou.fr"
+          twitter="jloupiote"
+          github="jloupiote"
+          pic={images.jl}
+        />
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
