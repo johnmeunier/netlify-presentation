@@ -19,18 +19,18 @@ const Profile = ({ name, job, website, github, twitter, pic }) => (
     <Image src={pic} className="avatar" />
     <List textAlign="left" className="presentation__list">
       <ListItem>
-        <Link head={"http://" + website}>
+        <Link href={"http://" + website}>
           <Image src={images.web} />
           {website}
         </Link>
       </ListItem>
       <ListItem>
-        <Link head={"http://twitter.com/" + { twitter }}>
+        <Link href={"http://twitter.com/" + twitter}>
           <Image src={images.twitter} />@{twitter}
         </Link>
       </ListItem>
       <ListItem>
-        <Link head={"http://github.com/" + github}>
+        <Link href={"http://github.com/" + github}>
           <Image src={images.github} />
           {github}
         </Link>
