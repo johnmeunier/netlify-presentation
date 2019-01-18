@@ -50,8 +50,10 @@ Puis **démo** directement
 ## Conclusion (JL)
 
 ### Avancée
-Conf via netlify.toml
-Pricing
+#### Conf via netlify.toml
+#### JAMStack
+#### Firebase
+#### Pricing
 
 ### Résumé
 

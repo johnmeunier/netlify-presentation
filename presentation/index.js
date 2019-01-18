@@ -13,7 +13,12 @@ import {
   Table,
   TableHeaderItem,
   TableItem,
-  TableRow
+  TableRow,
+  Link,
+  Layout,
+  Fit,
+  Fill,
+  Text
 } from "spectacle";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -28,7 +33,11 @@ const images = {
   pr: require("../assets/pr.svg"),
   auth: require("../assets/auth.svg"),
   notification: require("../assets/notification.svg"),
-  toml: require("../assets/netlifytoml.png")
+  toml: require("../assets/netlifytoml.png"),
+  john: require("../assets/john.jpg"),
+  github: require("../assets/github.svg"),
+  web: require("../assets/web.svg"),
+  twitter: require("../assets/twitter.svg")
 };
 
 // Require CSS
@@ -66,6 +75,43 @@ export default class Presentation extends React.Component {
           <Heading textColor="primary" lineHeight={1} fit>
             Netlify
           </Heading>
+          <Layout>
+            <Fill>
+              <Heading textColor="secondary" size={6}>
+                Johnathan<br/>MEUNIER
+              </Heading>
+              <Link head="http://twitter.com/J7N__">@J7N__</Link>
+            </Fill>
+            <Fit>
+              <Heading textColor="primary" size={3}>&</Heading>
+            </Fit>
+            <Fill>
+              <Heading textColor="secondary" size={6}>
+                Jean-Lou<br/>PIERMÉ
+              </Heading>
+              <Link head="http://twitter.com/jloupiote">@jloupiote</Link>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="tertiary" className="bgDotted">          
+          <Heading textColor="secondary" size={3}>
+            Johnathan MEUNIER
+          </Heading>         
+          <Heading textColor="primary" size={5}>
+            FullStack Engineer JS
+          </Heading>
+          <Image src={images.john} className="avatar"/>
+          <List textAlign="left" className="presentation__list">
+            <ListItem><Link head="http://johnathan.fr">
+              <Image src={images.web} />Johnathan.fr</Link>
+            </ListItem>
+            <ListItem><Link head="http://twitter.com/j7n__">
+              <Image src={images.twitter} />@j7n__</Link>
+            </ListItem>
+            <ListItem><Link head="http://github.com/johnmeunier">
+              <Image src={images.github} />johnmeunier</Link>
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
