@@ -112,7 +112,7 @@ export default class Presentation extends React.Component {
           job="FullStack Software Engineer"
           website="jlou.fr"
           twitter="jloupiote"
-          github="jloupiote"
+          github="jlou"
           pic={images.jl}
         />
         <Slide transition={["zoom"]} bgColor="primary">
