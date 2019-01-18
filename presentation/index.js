@@ -2,25 +2,22 @@
 import React from "react";
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
+  Appear,
   Deck,
   Heading,
   Image,
   List,
   ListItem,
-  Notes,
-  Quote,
-  Slide,
-  Text,
   S,
-  Layout,
-  Fill,
-  Fit
+  Slide,
+  Table,
+  TableHeaderItem,
+  TableItem,
+  TableRow
 } from "spectacle";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-import heading from "spectacle/lib/components/heading";
+import "./style.css";
 
 const images = {
   netlifyFull: require("../assets/netlify-full.svg"),
@@ -62,6 +59,14 @@ export default class Presentation extends React.Component {
         theme={theme}
         progress="bar"
       >
+        <Slide bgColor="tertiary">
+          <Heading size={5} textColor="secondary">
+            Simplify web deployments with
+          </Heading>
+          <Heading textColor="primary" lineHeight={1} fit>
+            Netlify
+          </Heading>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
@@ -86,11 +91,17 @@ export default class Presentation extends React.Component {
             Simple, but limited
           </Heading>
           <List>
-            <ListItem>
-              <S type="bold">Requires</S> a Github repository
-            </ListItem>
-            <ListItem>Generated code must be checked in</ListItem>
-            <ListItem>Single version online</ListItem>
+            <Appear>
+              <ListItem>
+                <S type="bold">Requires</S> a Github repository
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Generated code must be checked in</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Single version online</ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
@@ -223,6 +234,107 @@ export default class Presentation extends React.Component {
             <ListItem>Role-based access control</ListItem>
           </List>
         </Slide>
+        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+          <Heading size={1} lineHeight={2} fill textColor="primary">
+            Pricing
+          </Heading>
+          <Table textColor="dark">
+            <TableRow>
+              <TableHeaderItem>Free</TableHeaderItem>
+              <TableHeaderItem textColor="dark">45$/mo</TableHeaderItem>
+              <TableHeaderItem textColor="dark">290$/mo</TableHeaderItem>
+            </TableRow>
+            <TableRow>
+              <TableItem>1 User</TableItem>
+              <TableItem>5 Users</TableItem>
+              <TableItem>10 Users</TableItem>
+            </TableRow>
+            <TableRow>
+              <TableItem />
+
+              <TableItem>Owner / collaborator roles</TableItem>
+              <TableItem>Multiple roles</TableItem>
+            </TableRow>
+            <TableRow>
+              <TableItem />
+              <TableItem>Password protection</TableItem>
+              <TableItem>Role-based access control</TableItem>
+            </TableRow>
+          </Table>
+        </Slide>
+        {/* <Slide className="retro">
+          <Layout>
+            <Appear fid="1">
+              <Fill className="retro__fill">
+                <Heading
+                  className="retro__title"
+                  size={4}
+                  textColor="secondary"
+                  margin={10}
+                >
+                  Toolkit V1
+                </Heading>
+                <div className="retro__img-container" />
+                <Heading size={6} textColor="secondary" margin={20}>
+                  Jquery / CSS / Bootstrap / AngularJs
+                </Heading>
+                <List className="retro__list">
+                  <ListItem>Gain de temps sur les projets</ListItem>
+                  <ListItem>
+                    Homogénéisation graphiques et fonctionnelle
+                  </ListItem>
+                </List>
+              </Fill>
+            </Appear>
+            <Appear fid="2">
+              <Fill className="retro__fill">
+                <Heading
+                  className="retro__title"
+                  size={4}
+                  textColor="secondary"
+                  margin={10}
+                >
+                  Toolkit V2
+                </Heading>
+                <div className="retro__img-container" />
+                <Heading size={6} textColor="secondary" margin={10}>
+                  Angularjs / SASS / Bootstrap
+                </Heading>
+                <List className="retro__list">
+                  <ListItem>Fork de AngularStrap</ListItem>
+                  <ListItem>Prémisses d'un design system</ListItem>
+                  <ListItem>Form Generator</ListItem>
+                </List>
+              </Fill>
+            </Appear>
+            <Appear fid="3">
+              <Fill className="retro__fill retro__fill--actual">
+                <Heading
+                  className="retro__title"
+                  size={4}
+                  textColor="secondary"
+                  margin={10}
+                >
+                  Toolkit V3
+                </Heading>
+                <div className="retro__fill-part">
+                  <Heading size={6} textColor="secondary" margin={10}>
+                    React / Angular / Vuejs
+                  </Heading>
+                </div>
+                <div className="retro__fill-part">
+                  <Heading size={6} textColor="secondary" margin={10}>
+                    HTML / SASS / BEM
+                  </Heading>
+                </div>
+                <List className="retro__list">
+                  <ListItem>Framework JS Agnostique</ListItem>
+                  <ListItem>Composants</ListItem>
+                </List>
+              </Fill>
+            </Appear>
+          </Layout>
+        </Slide> */}
         <Slide>
           <Heading textColor="secondary" fit>
             Thanks!

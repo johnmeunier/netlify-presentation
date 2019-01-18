@@ -1,0 +1,129 @@
+a {
+  color: #61dafb;
+}
+
+.slide1__text {
+  color: #61dafb;
+  font-size: 2em;
+}
+
+.splash {
+  max-width: inherit !important;
+}
+.splash__part {
+  padding: 1em;
+}
+.splash__img {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.speaker {
+  position: relative;
+  display: inline-block;
+  margin-top: 2em;
+}
+.speaker__company-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%, 0);
+}
+.speaker__avatar {
+  clip-path: polygon(
+    3.66% -0.37%,
+    98.65% 0%,
+    98.66% 88.43%,
+    84.39% 89.09%,
+    80.37% 100%,
+    70.82% 88.43%,
+    6.04% 88.43%
+  );
+  border: white 3px solid;
+}
+.speaker__avatar-border {
+  background: white;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(
+    -3.59% -0.37%,
+    74.47% 0.49%,
+    80.28% 71.98%,
+    67.46% 74.1%,
+    74.76% 90.17%,
+    49.54% 72.96%,
+    -1.21% 75.37%
+  );
+}
+.speaker__social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speaker__social-item .speaker__social-img {
+  background: #61dafb;
+  padding: 2px;
+  border-radius: 100%;
+  margin: 0 0.5rem 0;
+  display: inline;
+}
+.speaker__social-link .speaker__social-text {
+  color: #61dafb;
+  margin: 0;
+}
+.retro {
+  max-width: inherit !important;
+  text-align: center;
+  background: green;
+}
+.retro__fill {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 1em 1em 1em;
+  padding: 0 0.5em 1em 0.5em;
+  background: white;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.retro__fill-part {
+  width: 50%;
+}
+.retro__fill-part:nth-child(2) {
+  border-right: 1px solid #888;
+}
+.retro__fill .retro__img {
+  margin: 0;
+  display: inline-flex;
+  flex-basis: calc(100% / 6);
+  background: white;
+}
+.retro__fill--actual {
+  background: white;
+}
+.retro__fill--actual .retro__img {
+  flex-basis: calc(100% / 2);
+}
+.retro__title {
+  display: block !important;
+  color: #00008f !important;
+  text-align: center !important;
+  margin-bottom: 0.5em !important;
+  width: 100%;
+}
+.retro__list {
+  text-align: center !important;
+  list-style: none;
+  padding: 0.5em 0 0 0 !important;
+  margin: 0;
+  border-top: 1px solid #888;
+}
+.bem__sublist {
+  padding-left: 1em !important;
+}
+.lerna__sublist {
+  padding-left: 1em !important;
+}
