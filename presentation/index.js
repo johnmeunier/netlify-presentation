@@ -385,6 +385,41 @@ export default class Presentation extends React.Component {
         </Slide> */}
         <Slide>
           <Heading textColor="secondary" fit>
+            Why use Netlify:
+          </Heading>
+          <Appear>
+            <Heading
+              textAlign="left"
+              size={3}
+              lineHeight={3}
+              textColor="secondary"
+            >
+              &#10003; &nbsp; Automatic build
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading
+              textAlign="left"
+              size={4}
+              lineHeight={1}
+              textColor="secondary"
+            >
+              &#10003; &nbsp;Automatic deployment
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading
+              textAlign="left"
+              size={3}
+              lineHeight={3}
+              textColor="secondary"
+            >
+              &#10003; &nbsp;Previews
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading textColor="secondary" fit>
             Thanks!
           </Heading>
         </Slide>

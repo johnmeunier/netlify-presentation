@@ -24,6 +24,9 @@
   background-size: 22px 22px;
 }
 
+.list--nostyle {
+  list-style: none;
+}
 a {
   color: #61dafb;
 }
@@ -114,7 +117,6 @@ a {
   background: white;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
-
 .retro__fill-part {
   width: 50%;
 }
@@ -130,6 +132,7 @@ a {
 .retro__fill--actual {
   background: white;
 }
+
 .retro__fill--actual .retro__img {
   flex-basis: calc(100% / 2);
 }
