@@ -1,5 +1,5 @@
 // Import React
-import React from "react";
+import React from 'react';
 // Import Spectacle Core tags
 import {
   Appear,
@@ -13,47 +13,46 @@ import {
   Table,
   TableHeaderItem,
   TableItem,
-  TableRow,
-  Link,
-  Layout,
-  Fit,
-  Fill,
-  Text
-} from "spectacle";
+  TableRow
+} from 'spectacle';
 
-import Profile from "./profiles";
+import Profile from './profiles';
+import Twitter from './twitter';
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
-import "./style.css";
+import createTheme from 'spectacle/lib/themes/default';
+import './style.css';
 
 const images = {
-  netlifyFull: require("../assets/netlify-full.svg"),
-  domains: require("../assets/domains.svg"),
-  forms: require("../assets/forms.svg"),
-  identity: require("../assets/identity.svg"),
-  splitTesting: require("../assets/splitTesting.svg"),
-  pr: require("../assets/pr.svg"),
-  auth: require("../assets/auth.svg"),
-  notification: require("../assets/notification.svg"),
-  toml: require("../assets/netlifytoml.png"),
-  john: require("../assets/john.jpg"),
-  jl: require("../assets/jl.jpg")
+  netlifyFull: require('../assets/netlify-full.svg'),
+  domains: require('../assets/domains.svg'),
+  forms: require('../assets/forms.svg'),
+  identity: require('../assets/identity.svg'),
+  splitTesting: require('../assets/splitTesting.svg'),
+  pr: require('../assets/pr.svg'),
+  auth: require('../assets/auth.svg'),
+  notification: require('../assets/notification.svg'),
+  toml: require('../assets/netlifytoml.png'),
+  john: require('../assets/john.jpg'),
+  jl: require('../assets/jl.jpg'),
+  free: require('../assets/free.png'),
+  pro: require('../assets/pro.png'),
+  business: require('../assets/business.png')
 };
 
 // Require CSS
-require("normalize.css");
+require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: "#e74c3c",
-    secondary: "#ecf0f1",
-    tertiary: "#85144b",
-    quaternary: "#001f3f",
-    dark: "#080F0F"
+    primary: '#e74c3c',
+    secondary: '#ecf0f1',
+    tertiary: '#85144b',
+    quaternary: '#001f3f',
+    dark: '#080F0F'
   },
   {
-    primary: "Montserrat",
-    secondary: "Helvetica"
+    primary: 'Montserrat',
+    secondary: 'Helvetica'
   }
 );
 
@@ -62,12 +61,7 @@ const featureImageSize = 800;
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={["slide"]}
-        transitionDuration={500}
-        theme={theme}
-        progress="bar"
-      >
+      <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="bar">
         <Slide bgColor="tertiary">
           <Heading size={5} textColor="secondary">
             Simplify web deployments with
@@ -75,29 +69,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="primary" lineHeight={1} fit>
             Netlify
           </Heading>
-          <Layout>
-            <Fill>
-              <Heading textColor="secondary" size={6}>
-                Johnathan
-                <br />
-                MEUNIER
-              </Heading>
-              <Link head="http://twitter.com/J7N__">@J7N__</Link>
-            </Fill>
-            <Fit>
-              <Heading textColor="primary" size={3}>
-                &
-              </Heading>
-            </Fit>
-            <Fill>
-              <Heading textColor="secondary" size={6}>
-                Jean-Lou
-                <br />
-                PIERMÉ
-              </Heading>
-              <Link head="http://twitter.com/jloupiote">@jloupiote</Link>
-            </Fill>
-          </Layout>
+          <Twitter />
         </Slide>
         <Profile
           name="Johnathan MEUNIER"
@@ -115,12 +87,12 @@ export default class Presentation extends React.Component {
           github="jlou"
           pic={images.jl}
         />
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
           </Heading>
@@ -131,7 +103,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Github Pages
           </Heading>
@@ -152,7 +124,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary">
           <Heading size={3} caps textColor="secondary">
             Continuous integration tools
           </Heading>
@@ -244,7 +216,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Image src={images.toml} width={featureImageSize} />
         </Slide>
-        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
           <Heading size={1} fill textColor="primary">
             Pricing
           </Heading>
@@ -255,7 +227,7 @@ export default class Presentation extends React.Component {
             <ListItem>1 user</ListItem>
           </List>
         </Slide>
-        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
           <Heading size={1} fill textColor="primary">
             Pricing
           </Heading>
@@ -268,7 +240,7 @@ export default class Presentation extends React.Component {
             <ListItem fit>Password Protection</ListItem>
           </List>
         </Slide>
-        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
           <Heading size={1} fill textColor="primary">
             Pricing
           </Heading>
@@ -282,7 +254,7 @@ export default class Presentation extends React.Component {
             <ListItem>Role-based access control</ListItem>
           </List>
         </Slide>
-        <Slide bgColor="secondary" transition={["zoom", "slide"]}>
+        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
           <Heading size={1} lineHeight={2} fill textColor="primary">
             Pricing
           </Heading>
@@ -307,6 +279,24 @@ export default class Presentation extends React.Component {
               <TableItem />
               <TableItem>Password protection</TableItem>
               <TableItem>Role-based access control</TableItem>
+            </TableRow>
+          </Table>
+        </Slide>
+        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
+          <Heading size={1} lineHeight={2} fill textColor="primary">
+            Pricing
+          </Heading>
+          <Table textColor="dark">
+            <TableRow>
+              <TableItem>
+                <Image src={images.free} />
+              </TableItem>
+              <TableItem>
+                <Image src={images.pro} />
+              </TableItem>
+              <TableItem>
+                <Image src={images.business} />
+              </TableItem>
             </TableRow>
           </Table>
         </Slide>
@@ -388,40 +378,29 @@ export default class Presentation extends React.Component {
             Why use Netlify:
           </Heading>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={3}
-              lineHeight={3}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={3} lineHeight={3} textColor="secondary">
               &#10003; &nbsp; Automatic build
             </Heading>
           </Appear>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={4}
-              lineHeight={1}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={4} lineHeight={1} textColor="secondary">
               &#10003; &nbsp;Automatic deployment
             </Heading>
           </Appear>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={3}
-              lineHeight={3}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={3} lineHeight={3} textColor="secondary">
               &#10003; &nbsp;Previews
             </Heading>
           </Appear>
         </Slide>
-        <Slide>
+        <Slide bgColor="tertiary">
+          <Heading size={6} textColor="secondary">
+            Simplify web deployments with Netlify
+          </Heading>
           <Heading textColor="secondary" fit>
             Thanks!
           </Heading>
+          <Twitter />
         </Slide>
       </Deck>
     );
