@@ -1,15 +1,16 @@
-import React from "react";
-import { Heading, ListItem, List, Slide, Image, Link } from "spectacle";
+import React from 'react';
+import { Heading, ListItem, List, Slide, Image, Link } from 'spectacle';
 
 const images = {
-  john: require("../../assets/john.jpg"),
-  github: require("../../assets/github.svg"),
-  web: require("../../assets/web.svg"),
-  twitter: require("../../assets/twitter.svg")
+  john: require('../../assets/john.jpg'),
+  github: require('../../assets/github.svg'),
+  web: require('../../assets/web.svg'),
+  twitter: require('../../assets/twitter.svg'),
+  space: require('../../assets/space.jpg')
 };
 
 const Profile = ({ name, job, website, github, twitter, pic }) => (
-  <Slide bgColor="tertiary" className="bgDotted">
+  <Slide bgColor="tertiary" bgImage={images.space} bgDarken={0.6} className="bgDotted">
     <Heading textColor="secondary" size={3}>
       {name}
     </Heading>
@@ -19,18 +20,18 @@ const Profile = ({ name, job, website, github, twitter, pic }) => (
     <Image src={pic} className="avatar" />
     <List textAlign="left" className="presentation__list">
       <ListItem>
-        <Link href={"http://" + website}>
+        <Link href={`http://${website}`}>
           <Image src={images.web} />
           {website}
         </Link>
       </ListItem>
       <ListItem>
-        <Link href={"http://twitter.com/" + twitter}>
+        <Link href={`http://twitter.com/${twitter}`}>
           <Image src={images.twitter} />@{twitter}
         </Link>
       </ListItem>
       <ListItem>
-        <Link href={"http://github.com/" + github}>
+        <Link href={`http://github.com/${github}`}>
           <Image src={images.github} />
           {github}
         </Link>
