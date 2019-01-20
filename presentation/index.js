@@ -96,10 +96,19 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
           </Heading>
+          <Heading italic size={5} textColor="tertiary">
+            Redundant and error prone
+          </Heading>
           <List>
-            <ListItem>Build locally</ListItem>
-            <ListItem>Deploy via ftp (or something other tool)</ListItem>
-            <ListItem>Time consuming &amp; error-prone</ListItem>
+            <Appear>
+              <ListItem>Build locally</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Deploy via ftp (or something other tool)</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Time consuming &amp; error-prone</ListItem>
+            </Appear>
           </List>
         </Slide>
 
@@ -132,9 +141,15 @@ export default class Presentation extends React.Component {
             Travis, Azure pipelines, etc...
           </Heading>
           <List>
-            <ListItem>Can build and deploy automatically</ListItem>
-            <ListItem>Requires an external hosting solution</ListItem>
-            <ListItem>Can be complicated to setup</ListItem>
+            <Appear>
+              <ListItem>Can build and deploy automatically</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Requires an external hosting solution</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Can be complicated to setup</ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide bgColor="secondary">
