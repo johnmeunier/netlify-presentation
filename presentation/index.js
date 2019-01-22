@@ -38,7 +38,9 @@ const images = {
   jl: require('../assets/jl.jpg'),
   free: require('../assets/free.png'),
   pro: require('../assets/pro.png'),
-  business: require('../assets/business.png')
+  business: require('../assets/business.png'),
+  jam: require('../assets/jam.png'),
+  jamstackLogo: require('../assets/jamstackLogo.png'),
 };
 
 // Require CSS
@@ -49,7 +51,7 @@ const theme = createTheme(
     primary: '#e74c3c',
     secondary: '#ecf0f1',
     tertiary: '#85144b',
-    quaternary: '#001f3f',
+    quaternary: '#85144b',
     dark: '#080F0F'
   },
   {
@@ -65,7 +67,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="bar">
         <Slide bgColor="tertiary">
-          <Note presenter="john" notes={["Note 1", "Note 2", "Note 3"]}/>
+          <Note presenter="john" notes={[]}/>
           <Heading size={5} textColor="secondary">
             Simplify web deployments with
           </Heading>
@@ -91,11 +93,13 @@ export default class Presentation extends React.Component {
           pic={images.jl}
         />
         <Slide transition={['zoom']} bgColor="primary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
           </Heading>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
           </Heading>
@@ -116,6 +120,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['slide']} bgColor="primary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Github Pages
           </Heading>
@@ -137,6 +142,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={3} caps textColor="secondary">
             Continuous integration tools
           </Heading>
@@ -156,9 +162,11 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Image src={images.netlifyFull} width={1000} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} textColor="primary">
             Demo 1
           </Heading>
@@ -170,48 +178,56 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Heading size={2} textColor="primary">
             Custom domains & DNS configuration
           </Heading>
           <Image src={images.domains} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={2} textColor="primary">
             Split testing
           </Heading>
           <Image src={images.splitTesting} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={2} textColor="primary">
             Pull request deployment
           </Heading>
           <Image src={images.pr} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Heading size={2} textColor="primary">
             Notification
           </Heading>
           <Image src={images.notification} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Heading size={2} textColor="primary">
             Forms
           </Heading>
           <Image src={images.forms} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Heading size={2} textColor="primary">
             Identity
           </Heading>
           <Image src={images.identity} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={2} textColor="primary">
             Auth
           </Heading>
           <Image src={images.auth} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="john" notes={[]}/>
           <Heading size={1} textColor="primary" caps>
             Demo 2
           </Heading>
@@ -224,83 +240,25 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgColor="primary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} fit textColor="secondary" caps>
             But also...
           </Heading>
         </Slide>
         <Slide bgColor="secondary">
+          <Note presenter="jl" notes={[]}/>
           <Heading size={1} fit textColor="primary" caps>
             Configuration as Code
           </Heading>
           <Image src={images.toml} width={featureImageSize} />
         </Slide>
-        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
-          <Heading size={1} fill textColor="primary">
-            Pricing
-          </Heading>
-          <Heading size={5} fill>
-            Free
-          </Heading>
-          <List fit textColor="dark">
-            <ListItem>1 user</ListItem>
-          </List>
+        <Slide bgColor="#fff">
+          <Note presenter="jl" notes={[]}/>
+          <Image src={images.jamstackLogo} />
+          <Image src={images.jam} fit/>
         </Slide>
-        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
-          <Heading size={1} fill textColor="primary">
-            Pricing
-          </Heading>
-          <Heading size={5} fill>
-            45$/mo
-          </Heading>
-          <List fit textColor="dark">
-            <ListItem>5 users</ListItem>
-            <ListItem>Owner / Collaborator roles</ListItem>
-            <ListItem fit>Password Protection</ListItem>
-          </List>
-        </Slide>
-        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
-          <Heading size={1} fill textColor="primary">
-            Pricing
-          </Heading>
-
-          <Heading size={5} fill>
-            290$/mo
-          </Heading>
-          <List fit textColor="dark">
-            <ListItem>10 user</ListItem>
-            <ListItem>Multiple roles</ListItem>
-            <ListItem>Role-based access control</ListItem>
-          </List>
-        </Slide>
-        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
-          <Heading size={1} lineHeight={2} fill textColor="primary">
-            Pricing
-          </Heading>
-          <Table textColor="dark">
-            <TableRow>
-              <TableHeaderItem>Free</TableHeaderItem>
-              <TableHeaderItem textColor="dark">45$/mo</TableHeaderItem>
-              <TableHeaderItem textColor="dark">290$/mo</TableHeaderItem>
-            </TableRow>
-            <TableRow>
-              <TableItem>1 User</TableItem>
-              <TableItem>5 Users</TableItem>
-              <TableItem>10 Users</TableItem>
-            </TableRow>
-            <TableRow>
-              <TableItem />
-
-              <TableItem>Owner / collaborator roles</TableItem>
-              <TableItem>Multiple roles</TableItem>
-            </TableRow>
-            <TableRow>
-              <TableItem />
-              <TableItem>Password protection</TableItem>
-              <TableItem>Role-based access control</TableItem>
-            </TableRow>
-          </Table>
-        </Slide>
-        <Slide bgColor="secondary" transition={['zoom', 'slide']}>
+        <Slide bgColor="#fff" transition={['zoom', 'slide']}>
+          <Note presenter="john" notes={[]}/>
           <Heading size={1} lineHeight={2} fill textColor="primary">
             Pricing
           </Heading>
@@ -319,6 +277,7 @@ export default class Presentation extends React.Component {
           </Table>
         </Slide>
         <Slide>
+          <Note presenter="john" notes={[]}/>
           <Heading textColor="secondary" fit>
             Why use Netlify:
           </Heading>

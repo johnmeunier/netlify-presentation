@@ -9,7 +9,7 @@ const images = {
 };
 
 const Profile = ({ name, job, website, github, twitter, pic }) => (
-  <Slide bgColor="tertiary" bgImage={images.space} bgDarken={0.6} className="bgDotted">
+  <Slide bgColor="tertiary" bgImage={images.space} bgDarken={0.4} className="bgDotted">
     <Heading textColor="secondary" size={3}>
       {name}
     </Heading>
