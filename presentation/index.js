@@ -13,11 +13,13 @@ import {
   Table,
   TableHeaderItem,
   TableItem,
-  TableRow
+  TableRow,
+  Notes
 } from 'spectacle';
 
 import Profile from './profiles';
 import Twitter from './twitter';
+import Note from './notes';
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 import './style.css';
@@ -63,6 +65,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="bar">
         <Slide bgColor="tertiary">
+          <Note presenter="john" notes={["Note 1", "Note 2", "Note 3"]}/>
           <Heading size={5} textColor="secondary">
             Simplify web deployments with
           </Heading>
@@ -315,79 +318,6 @@ export default class Presentation extends React.Component {
             </TableRow>
           </Table>
         </Slide>
-        {/* <Slide className="retro">
-          <Layout>
-            <Appear fid="1">
-              <Fill className="retro__fill">
-                <Heading
-                  className="retro__title"
-                  size={4}
-                  textColor="secondary"
-                  margin={10}
-                >
-                  Toolkit V1
-                </Heading>
-                <div className="retro__img-container" />
-                <Heading size={6} textColor="secondary" margin={20}>
-                  Jquery / CSS / Bootstrap / AngularJs
-                </Heading>
-                <List className="retro__list">
-                  <ListItem>Gain de temps sur les projets</ListItem>
-                  <ListItem>
-                    Homogénéisation graphiques et fonctionnelle
-                  </ListItem>
-                </List>
-              </Fill>
-            </Appear>
-            <Appear fid="2">
-              <Fill className="retro__fill">
-                <Heading
-                  className="retro__title"
-                  size={4}
-                  textColor="secondary"
-                  margin={10}
-                >
-                  Toolkit V2
-                </Heading>
-                <div className="retro__img-container" />
-                <Heading size={6} textColor="secondary" margin={10}>
-                  Angularjs / SASS / Bootstrap
-                </Heading>
-                <List className="retro__list">
-                  <ListItem>Fork de AngularStrap</ListItem>
-                  <ListItem>Prémisses d'un design system</ListItem>
-                  <ListItem>Form Generator</ListItem>
-                </List>
-              </Fill>
-            </Appear>
-            <Appear fid="3">
-              <Fill className="retro__fill retro__fill--actual">
-                <Heading
-                  className="retro__title"
-                  size={4}
-                  textColor="secondary"
-                  margin={10}
-                >
-                  Toolkit V3
-                </Heading>
-                <div className="retro__fill-part">
-                  <Heading size={6} textColor="secondary" margin={10}>
-                    React / Angular / Vuejs
-                  </Heading>
-                </div>
-                <div className="retro__fill-part">
-                  <Heading size={6} textColor="secondary" margin={10}>
-                    HTML / SASS / BEM
-                  </Heading>
-                </div>
-                <List className="retro__list">
-                  <ListItem>Framework JS Agnostique</ListItem>
-                  <ListItem>Composants</ListItem>
-                </List>
-              </Fill>
-            </Appear>
-          </Layout>
-        </Slide> */}
         <Slide>
           <Heading textColor="secondary" fit>
             Why use Netlify:

@@ -2,7 +2,6 @@ import React from 'react';
 import { Heading, ListItem, List, Slide, Image, Link } from 'spectacle';
 
 const images = {
-  john: require('../../assets/john.jpg'),
   github: require('../../assets/github.svg'),
   web: require('../../assets/web.svg'),
   twitter: require('../../assets/twitter.svg'),
