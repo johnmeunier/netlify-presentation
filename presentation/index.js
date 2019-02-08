@@ -1,21 +1,7 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import {
-  Appear,
-  Deck,
-  Heading,
-  Image,
-  List,
-  ListItem,
-  S,
-  Slide,
-  Table,
-  TableHeaderItem,
-  TableItem,
-  TableRow,
-  Notes
-} from "spectacle";
+import { Appear, Deck, Heading, Image, List, ListItem, S, Slide, Table, TableItem, TableRow } from "spectacle";
 
 import Profile from "./profiles";
 import Twitter from "./twitter";
@@ -40,7 +26,11 @@ const images = {
   pro: require("../assets/pro.png"),
   business: require("../assets/business.png"),
   jam: require("../assets/jam.png"),
-  jamstackLogo: require("../assets/jamstackLogo.png")
+  jamstackLogo: require("../assets/jamstackLogo.png"),
+  lwFiles: require("../assets/lwFiles.png"),
+  lwNetlifyConf: require("../assets/lwNetlifyConf.png"),
+  lw1: require("../assets/lw1.png"),
+  lw2: require("../assets/lw2.png")
 };
 
 // Require CSS
@@ -65,12 +55,7 @@ const featureImageSize = 800;
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={["slide"]}
-        transitionDuration={500}
-        theme={theme}
-        progress="bar"
-      >
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme} progress="bar">
         <Slide bgColor="tertiary">
           <Note presenter="john" notes={[]} />
           <Heading size={5} textColor="secondary">
@@ -171,10 +156,7 @@ export default class Presentation extends React.Component {
           <Image src={images.netlifyFull} width={1000} />
         </Slide>
         <Slide bgColor="secondary">
-          <Note
-            presenter="jl"
-            notes={["faire le site et push", "créer le site sur netlify"]}
-          />
+          <Note presenter="jl" notes={["faire le site et push", "créer le site sur netlify"]} />
           <Heading size={1} textColor="primary">
             Demo 1
           </Heading>
@@ -193,12 +175,7 @@ export default class Presentation extends React.Component {
           <Image src={images.domains} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
-          <Note
-            presenter="jl"
-            notes={[
-              "proposer aux participants d'aller sur chaptersplit.netlify.com"
-            ]}
-          />
+          <Note presenter="jl" notes={["proposer aux participants d'aller sur chaptersplit.netlify.com"]} />
           <Heading size={2} textColor="primary">
             Split testing
           </Heading>
@@ -278,6 +255,42 @@ export default class Presentation extends React.Component {
           <Image src={images.jamstackLogo} />
           <Image src={images.jam} fit />
         </Slide>
+        <Slide bgColor="#fff">
+          <Heading size={1} fill textColor="primary">
+            Example
+          </Heading>
+          <Heading size={5} fill textColor="primary">
+            Lille Web - Jekyll build
+          </Heading>
+          <Image src={images.lwFiles} />
+        </Slide>
+        <Slide bgColor="#fff">
+          <Heading size={1} fill textColor="primary">
+            Example
+          </Heading>
+          <Heading size={5} fill textColor="primary">
+            Lille Web - Jekyll build
+          </Heading>
+          <Image src={images.lwNetlifyConf} />
+        </Slide>
+        <Slide bgColor="#fff">
+          <Heading size={1} fill textColor="primary">
+            Example
+          </Heading>
+          <Heading size={5} fill textColor="primary">
+            Lille Web - Jekyll build
+          </Heading>
+          <Image src={images.lw1} />
+        </Slide>
+        <Slide bgColor="#fff">
+          <Heading size={1} fill textColor="primary">
+            Example
+          </Heading>
+          <Heading size={5} fill textColor="primary">
+            Lille Web - Jekyll build
+          </Heading>
+          <Image src={images.lw2} />
+        </Slide>
         <Slide bgColor="#fff" transition={["zoom", "slide"]}>
           <Note presenter="john" notes={[]} />
           <Heading size={1} lineHeight={2} fill textColor="primary">
@@ -303,32 +316,17 @@ export default class Presentation extends React.Component {
             Why use Netlify:
           </Heading>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={3}
-              lineHeight={3}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={3} lineHeight={3} textColor="secondary">
               &#10003; &nbsp; Automatic build
             </Heading>
           </Appear>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={4}
-              lineHeight={1}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={4} lineHeight={1} textColor="secondary">
               &#10003; &nbsp;Automatic deployment
             </Heading>
           </Appear>
           <Appear>
-            <Heading
-              textAlign="left"
-              size={3}
-              lineHeight={3}
-              textColor="secondary"
-            >
+            <Heading textAlign="left" size={3} lineHeight={3} textColor="secondary">
               &#10003; &nbsp;Previews
             </Heading>
           </Appear>
