@@ -1,0 +1,27 @@
+{
+  "name": "netlify-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmeunier/netlify-presentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmeunier/netlify-presentation/issues"
+  },
+  "homepage": "https://github.com/johnmeunier/netlify-presentation#readme",
+  "dependencies": {
+    "add": "^2.0.6",
+    "parcel-bundler": "^1.11.0"
+  },
+  "devDependencies": {
+    "sass": "^1.16.0"
+  }
+}
