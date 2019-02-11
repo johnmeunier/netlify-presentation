@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html>
+<h1>Test Formulaire Netlify</h1>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Demo du chapter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.scss" />
-</head>
-
-<body>
-    <h1>Salut les IARDers!</h1>
-</body>
-
-</html>
+<form name="contact" netlify>
+  <div>
+    <label>Name <input type="text" name="name"/></label>
+  </div>
+  <div>
+    <label>Email <input type="email" name="email"/></label>
+  </div>
+  <div>
+    <label>Password <input type="password" name="password"/></label>
+  </div>
+  <div>
+    <label>File <input type="file" name="file"/></label>
+  </div>
+  <div>
+    <button type="submit">Send</button>
+  </div>
+</form>
