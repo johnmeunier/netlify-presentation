@@ -30,7 +30,8 @@ const images = {
   lwFiles: require("../assets/lwFiles.png"),
   lwNetlifyConf: require("../assets/lwNetlifyConf.png"),
   lw1: require("../assets/lw1.png"),
-  lw2: require("../assets/lw2.png")
+  lw2: require("../assets/lw2.png"),
+  sanFrancisco: require("../assets/sanFrancisco.jpg")
 };
 
 // Require CSS
@@ -55,8 +56,8 @@ const featureImageSize = 800;
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={500} theme={theme} progress="bar">
-        <Slide bgColor="tertiary">
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme}>
+        <Slide bgColor="tertiary" bgImage={images.sanFrancisco} bgDarken={0.65}>
           <Note presenter="john" notes={[]} />
           <Heading size={5} textColor="secondary">
             Simplify web deployments with
@@ -82,13 +83,13 @@ export default class Presentation extends React.Component {
           github="jlou"
           pic={images.jl}
         />
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Note presenter="jl" notes={[]} />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Existing Solutions
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Note presenter="jl" notes={[]} />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Deploying by hand
@@ -109,7 +110,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Note presenter="jl" notes={[]} />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Github Pages
@@ -131,7 +132,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Note presenter="jl" notes={[]} />
           <Heading size={3} caps textColor="secondary">
             Continuous integration tools
@@ -158,7 +159,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="secondary">
           <Note presenter="jl" notes={["faire le site et push", "créer le site sur netlify"]} />
           <Heading size={1} textColor="primary">
-            Demo 1
+            First Demo
           </Heading>
           <List textColor="dark">
             <ListItem>Creation of a new project</ListItem>
@@ -203,23 +204,16 @@ export default class Presentation extends React.Component {
           <Image src={images.forms} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
-          <Note presenter="john" notes={[]} />
+          <Note presenter="john" notes={["gestion login interne", "oauth", "compte interne", "api netlify"]} />
           <Heading size={2} textColor="primary">
             Identity
           </Heading>
           <Image src={images.identity} width={featureImageSize} />
         </Slide>
         <Slide bgColor="secondary">
-          <Note presenter="jl" notes={["jlou-test.netlify.com"]} />
-          <Heading size={2} textColor="primary">
-            Auth
-          </Heading>
-          <Image src={images.auth} width={featureImageSize} />
-        </Slide>
-        <Slide bgColor="secondary">
           <Note presenter="john" notes={[]} />
           <Heading size={1} textColor="primary" caps>
-            Demo 2
+            Second Demo
           </Heading>
           <List textColor="dark">
             <ListItem>Domain changing</ListItem>
@@ -291,7 +285,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Image src={images.lw2} />
         </Slide>
-        <Slide bgColor="#fff" transition={["zoom", "slide"]}>
+        <Slide bgColor="#fff">
           <Note presenter="john" notes={[]} />
           <Heading size={1} lineHeight={2} fill textColor="primary">
             Pricing
@@ -331,11 +325,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="tertiary">
+        <Slide bgColor="tertiary" bgImage={images.sanFrancisco} bgDarken={0.65}>
           <Heading size={6} textColor="secondary">
             Simplify web deployments with Netlify
           </Heading>
-          <Heading textColor="secondary" fit>
+          <Heading textColor="primary" fit>
             Thanks!
           </Heading>
           <Twitter />

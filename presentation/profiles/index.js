@@ -1,15 +1,15 @@
-import React from 'react';
-import { Heading, ListItem, List, Slide, Image, Link } from 'spectacle';
+import React from "react";
+import { Heading, ListItem, List, Slide, Image, Link } from "spectacle";
 
 const images = {
-  github: require('../../assets/github.svg'),
-  web: require('../../assets/web.svg'),
-  twitter: require('../../assets/twitter.svg'),
-  space: require('../../assets/space.jpg')
+  github: require("../../assets/github.svg"),
+  web: require("../../assets/web.svg"),
+  twitter: require("../../assets/twitter.svg"),
+  space: require("../../assets/space.jpg")
 };
 
 const Profile = ({ name, job, website, github, twitter, pic }) => (
-  <Slide bgColor="tertiary" bgImage={images.space} bgDarken={0.4} className="bgDotted">
+  <Slide bgColor="tertiary" bgImage={images.space} bgDarken={0.2} className="bgDotted">
     <Heading textColor="secondary" size={3}>
       {name}
     </Heading>
