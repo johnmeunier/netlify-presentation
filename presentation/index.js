@@ -250,6 +250,17 @@ export default class Presentation extends React.Component {
           <Image src={images.jam} fit />
         </Slide>
         <Slide bgColor="#fff">
+          <Note presenter="jl" notes={[]} />
+          <Heading size={1} fit textColor="primary" caps>
+            3 ways to publish content
+          </Heading>
+          <List textColor="dark" ordered type="A">
+            <ListItem>Static in sources</ListItem>
+            <ListItem>Static on build</ListItem>
+            <ListItem>Dynamic with APIs</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="#fff">
           <Heading size={1} fill textColor="primary">
             Example
           </Heading>
