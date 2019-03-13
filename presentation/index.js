@@ -60,10 +60,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="tertiary" bgImage={images.sanFrancisco} bgDarken={0.65}>
           <Note presenter="john" notes={[]} />
           <Heading size={5} textColor="secondary">
-            Simplify web deployments with
-          </Heading>
-          <Heading textColor="primary" lineHeight={1} fit>
-            Netlify
+            This is an awesome PR
           </Heading>
           <Twitter />
         </Slide>
